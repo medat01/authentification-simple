@@ -1,0 +1,63 @@
+﻿@import '@nativescript/theme/css/core.css';
+@import '@nativescript/theme/css/default.css';
+
+/* Styles pour l'application d'authentification */
+Page {
+  background-color: #f5f5f5;
+}
+
+.form {
+  padding: 20;
+}
+
+.label {
+  font-size: 14;
+  color: #333;
+  margin-bottom: 5;
+}
+
+.input-field {
+  background-color: white;
+  border-radius: 4;
+  padding: 12;
+  margin-bottom: 10;
+  border-width: 1;
+  border-color: #e0e0e0;
+  font-size: 16;
+}
+
+.btn-primary {
+  background-color: #2196F3;
+  color: white;
+  border-radius: 4;
+  padding: 12;
+  margin: 8 0;
+  font-size: 16;
+}
+
+.btn-secondary {
+  background-color: #757575;
+  color: white;
+  border-radius: 4;
+  padding: 12;
+  margin: 8 0;
+  font-size: 16;
+}
+
+.label-error {
+  color: #f44336;
+  font-size: 12;
+  margin: 4 0;
+  text-align: center;
+}
+
+.label-success {
+  color: #4caf50;
+  font-size: 12;
+  margin: 4 0;
+  text-align: center;
+}
+
+.loader {
+  margin: 20;
+}

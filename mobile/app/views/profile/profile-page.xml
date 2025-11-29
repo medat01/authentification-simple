@@ -1,0 +1,22 @@
+<Page navigatingTo="onNavigatingTo" xmlns="http://schemas.nativescript.org/tns.xsd">
+    <ActionBar>
+        <Label text="Profil" />
+    </ActionBar>
+    
+    <ScrollView>
+        <StackLayout class="form" padding="20">
+            <Label text="Nom complet" class="label" marginTop="20" />
+            <Label id="fullNameLabel" text="{{ fullName }}" class="input-field" />
+            
+            <Label text="Email" class="label" marginTop="10" />
+            <Label id="emailLabel" text="{{ email }}" class="input-field" />
+            
+            <Label id="errorLabel" text="{{ errorMessage }}" class="label-error" visibility="{{ errorMessage ? 'visible' : 'collapse' }}" />
+            
+            <ActivityIndicator id="loader" busy="{{ isLoading }}" class="loader" />
+            
+            <Button text="Déconnexion" tap="{{ onLogout }}" class="btn-secondary" isEnabled="{{ !isLoading }}" />
+        </StackLayout>
+    </ScrollView>
+</Page>
+

@@ -1,0 +1,23 @@
+<Page navigatingTo="onNavigatingTo" xmlns="http://schemas.nativescript.org/tns.xsd">
+    <ActionBar>
+        <Label text="Connexion" />
+    </ActionBar>
+    
+    <ScrollView>
+        <StackLayout class="form" padding="20">
+            <Label text="Email" class="label" marginTop="20" />
+            <TextField id="emailField" hint="Entrez votre email" text="{{ email }}" class="input-field" keyboardType="email" />
+            
+            <Label text="Mot de passe" class="label" marginTop="10" />
+            <TextField id="passwordField" hint="Entrez votre mot de passe" text="{{ password }}" secure="true" class="input-field" />
+            
+            <Label id="errorLabel" text="{{ errorMessage }}" class="label-error" visibility="{{ errorMessage ? 'visible' : 'collapse' }}" />
+            
+            <ActivityIndicator id="loader" busy="{{ isLoading }}" class="loader" />
+            
+            <Button text="Se connecter" tap="{{ onLogin }}" class="btn-primary" isEnabled="{{ !isLoading }}" />
+            <Button text="S'inscrire" tap="{{ onNavigateToRegister }}" class="btn-secondary" isEnabled="{{ !isLoading }}" />
+        </StackLayout>
+    </ScrollView>
+</Page>
+

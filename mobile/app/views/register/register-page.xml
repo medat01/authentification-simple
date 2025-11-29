@@ -1,0 +1,30 @@
+<Page navigatingTo="onNavigatingTo" xmlns="http://schemas.nativescript.org/tns.xsd">
+    <ActionBar>
+        <Label text="Inscription" />
+    </ActionBar>
+    
+    <ScrollView>
+        <StackLayout class="form" padding="20">
+            <Label text="Nom complet" class="label" marginTop="20" />
+            <TextField id="fullNameField" hint="Entrez votre nom complet" text="{{ fullName }}" class="input-field" />
+            
+            <Label text="Email" class="label" marginTop="10" />
+            <TextField id="emailField" hint="Entrez votre email" text="{{ email }}" class="input-field" keyboardType="email" />
+            
+            <Label text="Mot de passe" class="label" marginTop="10" />
+            <TextField id="passwordField" hint="Entrez votre mot de passe (min 8 caractères)" text="{{ password }}" secure="true" class="input-field" />
+            
+            <Label text="Confirmer le mot de passe" class="label" marginTop="10" />
+            <TextField id="confirmPasswordField" hint="Confirmez votre mot de passe" text="{{ confirmPassword }}" secure="true" class="input-field" />
+            
+            <Label id="errorLabel" text="{{ errorMessage }}" class="label-error" visibility="{{ errorMessage ? 'visible' : 'collapse' }}" />
+            <Label id="successLabel" text="{{ successMessage }}" class="label-success" visibility="{{ successMessage ? 'visible' : 'collapse' }}" />
+            
+            <ActivityIndicator id="loader" busy="{{ isLoading }}" class="loader" />
+            
+            <Button text="S'inscrire" tap="{{ onRegister }}" class="btn-primary" isEnabled="{{ !isLoading }}" />
+            <Button text="Retour à la connexion" tap="{{ onNavigateToLogin }}" class="btn-secondary" isEnabled="{{ !isLoading }}" />
+        </StackLayout>
+    </ScrollView>
+</Page>
+

@@ -1,0 +1,23 @@
+{
+  "name": "mobile",
+  "main": "app/app.js",
+  "version": "1.0.0",
+  "private": true,
+  "nativescript": {
+    "id": "com.auth.simple"
+  },
+  "scripts": {
+    "android": "ns run android",
+    "ios": "ns run ios",
+    "preview": "ns preview",
+    "clean": "ns clean"
+  },
+  "dependencies": {
+    "@nativescript/core": "~9.0.0",
+    "@nativescript/theme": "^3.1.0"
+  },
+  "devDependencies": {
+    "@nativescript/android": "9.0.0",
+    "@nativescript/webpack": "~5.0.25"
+  }
+}
